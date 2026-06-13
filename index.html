@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Immanuel Habel Guru — Petugas Pendataan Lapangan & Mahasiswa Informatika. Berpengalaman 4+ tahun dalam sensus, survei nasional, dan manajemen operasional.">
+    <meta name="keywords" content="Immanuel Habel Guru, portofolio, data lapangan, BPS, informatika, CV">
+    <meta name="author" content="Immanuel Habel Guru">
+    <title>Immanuel Habel Guru — Portofolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== PARTICLE CANVAS BACKGROUND ========== -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">IHG<span class="logo-dot">.</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+                <li><a href="#education" class="nav-link">Pendidikan</a></li>
+                <li><a href="#gallery" class="nav-link">Galeri</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">👋 Selamat Datang</div>
+                <h1 class="hero-name">
+                    Immanuel Habel Guru<br>
+                    <span class="hero-name-accent">Lebah</span>
+                </h1>
+                <div class="hero-typing-wrapper">
+                    <span class="hero-typing-prefix">Saya seorang </span>
+                    <span class="hero-typing" id="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Petugas Pendataan Lapangan dengan pengalaman 4+ tahun dalam pelaksanaan sensus, survei nasional, dan manajemen operasional lapangan. Saat ini menempuh S1 Informatika di Universitas Siber Asia.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary" id="hero-cta-contact">
+                        <span>Hubungi Saya</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#experience" class="btn-secondary" id="hero-cta-experience">
+                        <span>Lihat Pengalaman</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Tahun Pengalaman</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Proyek Survei</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Organisasi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto Profil Diri -->
+            <div class="hero-photo" id="hero-photo-section">
+                <div class="photo-frame">
+                    <div class="photo-glow"></div>
+                    <div class="photo-border">
+                        <!-- Ganti src dengan foto Anda sendiri -->
+                        <img
+                            src="foto-profil/api/?name=Immanuel+Habel+Guru&size=400&background=0a0a1a&color=00e5ff&bold=true&font-size=0.25"
+                            alt="Foto Profil Immanuel Habel Guru"
+                            id="profile-photo"
+                            title="Immanuel Habel Guru — Petugas Pendataan Lapangan & Mahasiswa Informatika"
+                        >
+                    </div>
+                    <div class="photo-decoration photo-dec-1"></div>
+                    <div class="photo-decoration photo-dec-2"></div>
+                    <div class="photo-decoration photo-dec-3"></div>
+                </div>
+            </div>
+        </div><!-- end hero-inner -->
+
+        <div class="hero-scroll-indicator">
+            <span>Scroll ke bawah</span>
+            <div class="scroll-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Tentang Saya</span>
+                <h2 class="section-title">Profil <span class="text-glow">Profesional</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card reveal">
+                    <div class="about-icon">🎯</div>
+                    <h3>Siapa Saya</h3>
+                    <p>
+                        Perkenalkan, nama saya <strong>Immanuel Habel Guru</strong>. Saya adalah seorang profesional dengan pengalaman lebih dari 4 tahun dalam pelaksanaan sensus, survei nasional, dan manajemen operasional lapangan. Saat ini saya juga sedang menempuh studi <em>S1 Pendidikan Jarak Jauh (PJJ) Informatika</em> di Universitas Siber Asia.
+                    </p>
+                </div>
+                <div class="about-card glass-card reveal">
+                    <div class="about-icon">💡</div>
+                    <h3>Apa yang Saya Lakukan</h3>
+                    <p>
+                        Saya memiliki kombinasi keahlian teknis dalam pengolahan data serta kemampuan kepemimpinan dalam mengelola tim dan menjaga keamanan di lingkungan publik. Pengalaman saya memimpin KPPS dan mengelola data di BPS melatih saya untuk selalu memecahkan masalah secara efisien.
+                    </p>
+                </div>
+                <div class="about-card glass-card reveal">
+                    <div class="about-icon">🏆</div>
+                    <h3>Prinsip Saya</h3>
+                    <p>
+                        Saya terbukti mampu bekerja dengan target ketat, akurasi tinggi, dan kepatuhan penuh terhadap prosedur standar. Prinsip utama saya: <strong>akurasi data dan integritas operasional adalah kunci keberhasilan sistem</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-info-grid reveal">
+                <div class="info-item glass-card-sm">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <span class="info-label">Lokasi</span>
+                        <span class="info-value">Jakarta Utara</span>
+                    </div>
+                </div>
+                <div class="info-item glass-card-sm">
+                    <span class="info-icon">🎓</span>
+                    <div>
+                        <span class="info-label">Pendidikan</span>
+                        <span class="info-value">S1 Informatika (ongoing)</span>
+                    </div>
+                </div>
+                <div class="info-item glass-card-sm">
+                    <span class="info-icon">📧</span>
+                    <div>
+                        <span class="info-label">Email</span>
+                        <span class="info-value">immanuelhabel07@gmail.com</span>
+                    </div>
+                </div>
+                <div class="info-item glass-card-sm">
+                    <span class="info-icon">📱</span>
+                    <div>
+                        <span class="info-label">Telepon</span>
+                        <span class="info-value">089630013491</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== TABEL 1: Data Pribadi ===== -->
+            <div class="table-wrapper reveal" id="tabel-data-pribadi">
+                <h3 class="table-title">📋 Data Pribadi</h3>
+                <table class="cv-table" id="table-personal">
+                    <thead>
+                        <tr>
+                            <th>Keterangan</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nama Lengkap</strong></td>
+                            <td>Immanuel Habel Guru Lebah</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tempat, Tanggal Lahir</strong></td>
+                            <td>Jakarta, 7 November 2000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jenis Kelamin</strong></td>
+                            <td>Laki-laki</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agama</strong></td>
+                            <td>Katolik</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kewarganegaraan</strong></td>
+                            <td>Indonesia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Domisili</strong></td>
+                            <td>Jakarta Utara, DKI Jakarta</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email</strong></td>
+                            <td><a href="mailto:immanuelhabel07@gmail.com" class="table-link">immanuelhabel07@gmail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>No. Telepon</strong></td>
+                            <td><a href="https://wa.me/6289630013491" target="_blank" rel="noopener" class="table-link">089630013491</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>NIM / Program Studi</strong></td>
+                            <td>250401010630 / S1 Informatika PJJ — <em>Universitas Siber Asia</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ===== LIST 1: Ketertarikan & Minat ===== -->
+            <div class="list-wrapper reveal" id="list-minat">
+                <h3 class="list-title">🎯 Minat & Bidang yang Diminati</h3>
+                <ul class="cv-list" id="ul-minat">
+                    <li>🤖 <strong>Kecerdasan Buatan (AI)</strong> — terutama penerapan di analisis data dan fintech</li>
+                    <li>📊 <strong>Pengolahan & Visualisasi Data</strong> — statistik, survei, dan sistem informasi</li>
+                    <li>💻 <strong>Pemrograman Web</strong> — HTML, CSS, JavaScript, dan ekosistemnya</li>
+                    <li>🗺️ <strong>Sistem Informasi Geospasial</strong> — pemetaan wilayah dan analisis spasial</li>
+                    <li>📱 <strong>Teknologi Mobile</strong> — aplikasi lapangan berbasis Android/iOS</li>
+                </ul>
+            </div>
+
+        </div><!-- end section-container -->
+    </section>
+    <section class="section section-alt" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Kemampuan</span>
+                <h2 class="section-title">Keahlian <span class="text-glow">Saya</span></h2>
+            </div>
+
+            <div class="skills-wrapper">
+                <div class="skills-column reveal">
+                    <h3 class="skills-category-title">
+                        <span class="category-icon">⚙️</span> Keahlian Operasional & Lapangan
+                    </h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Kepemimpinan & Manajemen Tim</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Problem Solving</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Pemetaan & Geospasial</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Komunikasi & Survei</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Manajemen Keamanan TPS</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    </div>
+                </div>
+
+                <div class="skills-column reveal">
+                    <h3 class="skills-category-title">
+                        <span class="category-icon">💻</span> Keahlian Teknis & Data
+                    </h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Pengumpulan Data (Listing & Entry)</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill accent-2" data-width="92"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Verifikasi & Data Cleaning</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill accent-2" data-width="88"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Microsoft Office (Word, Excel)</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill accent-2" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Aplikasi Mobile BPS</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill accent-2" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Sistem Administrasi Kepemiluan</span>
+                            <span class="skill-percent">82%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill accent-2" data-width="82"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE SECTION ========== -->
+    <section class="section" id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Karir</span>
+                <h2 class="section-title">Pengalaman <span class="text-glow">Kerja</span></h2>
+                <p class="section-subtitle">Pengalaman kerja dan pengabdian masyarakat</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal" id="exp-bps">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-badge">2022 — 2026</span>
+                            <span class="timeline-org">Badan Pusat Statistik (BPS)</span>
+                        </div>
+                        <h3 class="timeline-title">Petugas Pendataan & Pengolahan</h3>
+                        <p class="timeline-desc">
+                            Melaksanakan sensus dan survei skala besar: Sensus Ekonomi (2026), Sensus Pertanian (2023), Regsosek (2022), dan Long Form SP2020.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Sensus Ekonomi</span>
+                            <span class="tag">Sensus Pertanian</span>
+                            <span class="tag">Regsosek</span>
+                            <span class="tag">SAKERNAS</span>
+                            <span class="tag">IBS</span>
+                            <span class="tag">Geospasial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal" id="exp-kpps">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-badge">Pemilu / Pilgub</span>
+                            <span class="timeline-org">KPU — Pilgub Jakarta</span>
+                        </div>
+                        <h3 class="timeline-title">Ketua KPPS</h3>
+                        <p class="timeline-desc">
+                            Memimpin seluruh proses pemungutan dan penghitungan suara, mengoordinasikan tugas anggota, dan menjamin prosedur sesuai regulasi KPU.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Kepemimpinan</span>
+                            <span class="tag">Koordinasi Tim</span>
+                            <span class="tag">Regulasi KPU</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal" id="exp-security">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-badge">Pemilu / Pilpres</span>
+                            <span class="timeline-org">KPU — Pilpres, DPR, DPRD</span>
+                        </div>
+                        <h3 class="timeline-title">Petugas Keamanan TPS</h3>
+                        <p class="timeline-desc">
+                            Mengelola alur pemilih, mencegah kendala lapangan, menjaga kondusivitas area, dan mengamankan dokumen hasil suara.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Keamanan</span>
+                            <span class="tag">Manajemen Alur</span>
+                            <span class="tag">Dokumentasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== TABEL 2: Ringkasan Pengalaman Kerja ===== -->
+            <div class="table-wrapper reveal" id="tabel-pengalaman">
+                <h3 class="table-title">📊 Ringkasan Pengalaman Kerja</h3>
+                <table class="cv-table" id="table-experience">
+                    <thead>
+                        <tr>
+                            <th>Tahun</th>
+                            <th>Jabatan / Peran</th>
+                            <th>Instansi / Lembaga</th>
+                            <th>Bidang</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2026</td>
+                            <td><strong>Petugas Sensus Ekonomi</strong></td>
+                            <td>Badan Pusat Statistik (BPS)</td>
+                            <td><em>Survei Ekonomi</em></td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td><strong>Ketua KPPS</strong></td>
+                            <td>KPU — Pilgub Jakarta</td>
+                            <td><em>Kepemiluan</em></td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td><strong>Petugas Keamanan TPS</strong></td>
+                            <td>KPU — Pilpres, DPR, DPRD</td>
+                            <td><em>Kepemiluan</em></td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td><strong>Petugas Sensus Pertanian (ST2023)</strong></td>
+                            <td>Badan Pusat Statistik (BPS)</td>
+                            <td><em>Survei Pertanian</em></td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td><strong>Petugas Regsosek</strong></td>
+                            <td>Badan Pusat Statistik (BPS)</td>
+                            <td><em>Pendataan Sosial</em></td>
+                        </tr>
+                        <tr>
+                            <td>2020 — 2021</td>
+                            <td><strong>Petugas Long Form SP2020</strong></td>
+                            <td>Badan Pusat Statistik (BPS)</td>
+                            <td><em>Sensus Penduduk</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ===== LIST 2: Tugas Utama Petugas Lapangan ===== -->
+            <div class="list-wrapper reveal" id="list-tugas">
+                <h3 class="list-title">✅ Tugas Utama sebagai Petugas Lapangan BPS</h3>
+                <ol class="cv-list-ordered" id="ol-tugas">
+                    <li>Melakukan <strong>listing</strong> dan pendataan rumah tangga / usaha di wilayah tugas yang ditentukan</li>
+                    <li>Mengisi kuesioner digital menggunakan <strong>aplikasi mobile BPS</strong> secara real-time</li>
+                    <li>Melakukan <strong>verifikasi dan cleaning data</strong> sebelum dikirimkan ke server pusat</li>
+                    <li>Koordinasi dengan <strong>Kortim (Koordinator Tim)</strong> untuk pelaporan harian dan pemecahan masalah lapangan</li>
+                    <li>Melakukan <strong>pemetaan geospasial</strong> blok sensus menggunakan aplikasi peta digital</li>
+                    <li>Menjaga <strong>kerahasiaan data responden</strong> sesuai UU Statistik No. 16 Tahun 1997</li>
+                </ol>
+            </div>
+
+        </div><!-- end section-container -->
+    </section>
+    <section class="section section-alt" id="education">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Pendidikan</span>
+                <h2 class="section-title">Riwayat <span class="text-glow">Pendidikan</span></h2>
+            </div>
+
+            <div class="education-grid">
+                <div class="edu-card glass-card reveal" id="edu-unsia">
+                    <div class="edu-status-badge active">Sedang Berjalan</div>
+                    <div class="edu-icon">🎓</div>
+                    <h3>S1 Informatika (PJJ)</h3>
+                    <p class="edu-institution">Universitas Siber Asia</p>
+                    <span class="edu-year">Saat Ini</span>
+                </div>
+                <div class="edu-card glass-card reveal" id="edu-smk">
+                    <div class="edu-icon">🏫</div>
+                    <h3>Sekolah Menengah Kejuruan</h3>
+                    <p class="edu-institution">SMK Strada 3</p>
+                    <span class="edu-year">2015 — 2018</span>
+                </div>
+                <div class="edu-card glass-card reveal" id="edu-smp">
+                    <div class="edu-icon">📚</div>
+                    <h3>Sekolah Menengah Pertama</h3>
+                    <p class="edu-institution">SMPN 277</p>
+                    <span class="edu-year">2012 — 2015</span>
+                </div>
+                <div class="edu-card glass-card reveal" id="edu-sd">
+                    <div class="edu-icon">✏️</div>
+                    <h3>Sekolah Dasar</h3>
+                    <p class="edu-institution">SDN Tugu Utara 02 Petang</p>
+                    <span class="edu-year">2006 — 2012</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALERI / GAMBAR SECTION ========== -->
+    <!-- Section ini menampilkan gambar-gambar terkait pengalaman lapangan -->
+    <section class="section" id="gallery">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Galeri</span>
+                <h2 class="section-title">Aktivitas <span class="text-glow">Lapangan</span></h2>
+                <p class="section-subtitle">Dokumentasi kegiatan dan lembaga tempat saya berkarir</p>
+            </div>
+
+            <div class="gallery-grid reveal">
+                <!-- Gambar 1: Logo BPS -->
+                <figure class="gallery-item glass-card" id="img-bps">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/BPS_logo.svg/240px-BPS_logo.svg.png"
+                        alt="Logo Badan Pusat Statistik (BPS) Indonesia"
+                        loading="lazy"
+                        title="Badan Pusat Statistik — tempat saya bertugas sebagai Petugas Pendataan Lapangan"
+                    >
+                    <figcaption>
+                        <h4>Badan Pusat Statistik (BPS)</h4>
+                        <p>Instansi pemerintah tempat saya bertugas sebagai Petugas Pendataan Lapangan dalam berbagai sensus dan survei nasional sejak 2020.</p>
+                        <a href="https://www.bps.go.id" target="_blank" rel="noopener noreferrer" class="gallery-link">🔗 Kunjungi Website BPS →</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Gambar 2: Logo UNSIA -->
+                <figure class="gallery-item glass-card" id="img-unsia">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Unsia_logo.png/240px-Unsia_logo.png"
+                        alt="Logo Universitas Siber Asia (UNSIA)"
+                        loading="lazy"
+                        title="Universitas Siber Asia — kampus saya saat ini menempuh S1 Informatika PJJ"
+                        onerror="this.src='https://ui-avatars.com/api/?name=UNSIA&size=240&background=0f0f2e&color=b388ff&bold=true'; this.alt='Universitas Siber Asia';"
+                    >
+                    <figcaption>
+                        <h4>Universitas Siber Asia (UNSIA)</h4>
+                        <p>Kampus digital tempat saya menempuh program <em>S1 Informatika PJJ</em> — memadukan teknologi informasi dengan fleksibilitas pembelajaran jarak jauh.</p>
+                        <a href="https://unsia.ac.id" target="_blank" rel="noopener noreferrer" class="gallery-link">🔗 Kunjungi Website UNSIA →</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Gambar 3: Ilustrasi survei lapangan -->
+                <figure class="gallery-item glass-card" id="img-survey">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tsunami_by_hokusai_19th_century.jpg/240px-Tsunami_by_hokusai_19th_century.jpg"
+                        alt="Ilustrasi kerja lapangan dan pengumpulan data"
+                        loading="lazy"
+                        title="Sensus Ekonomi 2026 — salah satu kegiatan pendataan terbesar yang saya ikuti"
+                        onerror="this.src='https://ui-avatars.com/api/?name=SE2026&size=240&background=0a1a0a&color=00e5ff&bold=true'; this.alt='Sensus Ekonomi 2026';"
+                    >
+                    <figcaption>
+                        <h4>Sensus Ekonomi 2026</h4>
+                        <p>Salah satu kegiatan pendataan terbesar yang saya ikuti — mendata <strong>seluruh pelaku usaha</strong> di wilayah Jakarta Utara menggunakan aplikasi mobile Fasih BPS.</p>
+                        <a href="https://se2026.bps.go.id" target="_blank" rel="noopener noreferrer" class="gallery-link">🔗 Info Sensus Ekonomi 2026 →</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Kontak</span>
+                <h2 class="section-title">Hubungi <span class="text-glow">Saya</span></h2>
+                <p class="section-subtitle">Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-cards">
+                    <a href="mailto:immanuelhabel07@gmail.com" class="contact-card glass-card reveal" id="contact-email">
+                        <div class="contact-card-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>immanuelhabel07@gmail.com</p>
+                        <span class="contact-card-action">Kirim Email →</span>
+                    </a>
+                    <a href="https://wa.me/6289630013491" target="_blank" rel="noopener noreferrer" class="contact-card glass-card reveal" id="contact-whatsapp">
+                        <div class="contact-card-icon">💬</div>
+                        <h3>WhatsApp</h3>
+                        <p>089630013491</p>
+                        <span class="contact-card-action">Chat Sekarang →</span>
+                    </a>
+                    <a href="https://unsia.ac.id" target="_blank" rel="noopener noreferrer" class="contact-card glass-card reveal" id="contact-unsia">
+                        <div class="contact-card-icon">🎓</div>
+                        <h3>Universitas</h3>
+                        <p>Universitas Siber Asia</p>
+                        <span class="contact-card-action">Kunjungi Website →</span>
+                    </a>
+                </div>
+
+                <div class="contact-form-wrapper glass-card reveal">
+                    <h3>Kirim Pesan</h3>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Nama Lengkap</label>
+                            <input type="text" id="form-name" name="name" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" name="email" placeholder="nama@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Pesan</label>
+                            <textarea id="form-message" name="message" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full" id="form-submit">
+                            <span>Kirim Pesan</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-name">Immanuel Habel Guru</p>
+            <p class="footer-copy">&copy; 2026 — Dibuat dengan ❤️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
