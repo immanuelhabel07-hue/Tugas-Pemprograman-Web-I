@@ -816,6 +816,39 @@ body {
 .form-feedback.success { background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.2); color: var(--accent); }
 .form-feedback.error   { background: rgba(255,82,82,0.08); border: 1px solid rgba(255,82,82,0.2); color: #ff5252; }
 
+/* ---- CUSTOM TABLES (GLASSMORPHISM) ---- */
+.table-glass-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  overflow-x: auto;
+}
+.custom-glass-table {
+  width: 100%;
+  color: var(--text);
+  margin-bottom: 0;
+  border-collapse: collapse;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-bottom: 3px solid var(--accent) !important;
+}
+.custom-glass-table th,
+.custom-glass-table td {
+  padding: 14px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  vertical-align: middle;
+}
+.custom-glass-table th {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.custom-glass-table tbody tr { transition: var(--transition); }
+.custom-glass-table tbody tr:hover { background: rgba(0,229,255,0.04); }
+
 /* ---- FOOTER ---- */
 .site-footer {
   background: rgba(0,0,0,0.4);
