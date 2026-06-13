@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- 
+==================================================
+IDENTITAS MAHASISWA
+Nama             : Immanuel Habel Guru
+NIM              : 250401010630
+Kelas            : IF205
+Nama Mata Kuliah : Pemrograman Web I
+================================================== 
+-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio Immanuel Habel Guru - Mahasiswa Informatika & Data Specialist" />
+  <meta name="keywords" content="Immanuel Habel Guru, Informatika, UNSIA, Portfolio, Web Developer" />
+  <meta name="author" content="Immanuel Habel Guru" />
+  <title>Immanuel Habel Guru — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== CANVAS PARTICLE ===================== -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ===================== MOUSE GLOW ===================== -->
+  <div id="mouse-glow"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-bracket">&lt;</span>IHG<span class="brand-bracket">/&gt;</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Pendidikan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Penghargaan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7 hero-text">
+          <p class="hero-eyebrow" data-aos="fade-up" data-aos-delay="0">
+            <span class="dot"></span> Siap untuk bekerja sama
+          </p>
+          <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">
+            Immanuel<br><span class="accent">Habel Guru</span>
+          </h1>
+          <div class="hero-typing-wrap" data-aos="fade-up" data-aos-delay="200">
+            <span id="typing-text"></span><span class="cursor">|</span>
+          </div>
+          <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+            Mahasiswa Informatika di Universitas Siber Asia yang aktif di dunia survei data dan pendataan lapangan. Tertarik pada Informatika, analisis keuangan, pengembangan web dan artificial intelligence.
+          </p>
+          <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+            <a href="cv.pdf" download class="btn-primary-custom me-3">
+              <i class="bi bi-download me-2"></i>Download CV
+            </a>
+            <a href="#contact" class="btn-outline-custom">
+              <i class="bi bi-send me-2"></i>Hubungi Saya
+            </a>
+          </div>
+          <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+            <div class="stat-item">
+              <span class="stat-num counter" data-target="7">0</span>
+              <span class="stat-label">Mata Kuliah</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num counter" data-target="4">0</span>
+              <span class="stat-label">Tahun Pengalaman</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num counter" data-target="18">0</span>
+              <span class="stat-label">Pekerjaan Selesai</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 hero-img-col" data-aos="fade-left" data-aos-delay="200">
+          <div class="hero-img-frame">
+            <div class="frame-ring ring-1"></div>
+            <div class="frame-ring ring-2"></div>
+            <div class="frame-ring ring-3"></div>
+            <img src="Asset/img/profil.jpg.png" alt="Immanuel Habel Guru" class="hero-profile-img" />
+            <div class="img-badge badge-nim">
+              <i class="bi bi-person-badge"></i>
+              <span>NIM 250401010630</span>
+            </div>
+            <div class="img-badge badge-class">
+              <i class="bi bi-mortarboard"></i>
+              <span>Kelas IF205</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">01 — Tentang Saya</span>
+        <h2 class="section-title">Siapa <span class="accent">Saya?</span></h2>
+      </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="about-img-box">
+            <img src="Asset/img/profil.jpg.png" alt="About Immanuel" class="about-img" />
+            <div class="about-card-float">
+              <i class="bi bi-shield-check text-accent"></i>
+              <div>
+                <strong>Mitra Statistik BPS Aktif</strong>
+                <small>Sensus Ekonomi 2026</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <p class="about-intro">
+            Halo! Saya <strong>Immanuel Habel Guru</strong>, mahasiswa semester 1 Program Studi Informatika (PJJ) di <strong>Universitas Siber Asia</strong>.
+          </p>
+          <p class="about-body">
+            Selain kuliah, saya aktif bekerja sebagai petugas pendataan lapangan di BPS Jakarta Utara(Badan Pusat Statistik), termasuk dalam pelaksanaan <strong>Sensus Ekonomi 2026</strong>. Pengalaman ini melatih saya untuk teliti, komunikatif, dan terbiasa bekerja dengan data di lapangan.
+          </p>
+          <p class="about-body">
+            Saya tertarik pada perpaduan antara <strong>Informatika</strong>, <strong>Analisis Keuangan</strong>, dan <strong>Artificial Intelligence</strong>. Ke depan, saya ingin berkontribusi di industri pasar keuangan dan Neuralink.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Universitas</span>
+              <span class="info-val">Universitas Siber Asia</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Program Studi</span>
+              <span class="info-val">Informatika S1 (PJJ)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">NIM</span>
+              <span class="info-val">250401010630</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Kelas</span>
+              <span class="info-val">IF205</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Lokasi</span>
+              <span class="info-val">Jakarta, Indonesia</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Status</span>
+              <span class="info-val">Aktif Kuliah</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">02 — Kemampuan</span>
+        <h2 class="section-title">Skills & <span class="accent">Kompetensi</span></h2>
+      </div>
+      <div class="row g-4">
+        <!-- Tech Skills -->
+        <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-card flex-grow-1">
+            <h4 class="skill-card-title"><i class="bi bi-code-slash me-2 text-accent"></i>Tech Skills</h4>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span><i class="bi bi-filetype-html"></i> HTML & CSS</span><span class="skill-pct">85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span><i class="bi bi-bootstrap"></i> Bootstrap 5</span><span class="skill-pct">80%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span><i class="bi bi-filetype-js"></i> JavaScript</span><span class="skill-pct">65%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-w="65"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span><i class="bi bi-filetype-py"></i> Python</span><span class="skill-pct">60%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-w="60"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label"><span><i class="bi bi-database"></i> SQL & Database</span><span class="skill-pct">70%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-w="70"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Soft Skills -->
+        <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-card mb-4">
+            <h4 class="skill-card-title"><i class="bi bi-people me-2 text-accent"></i>Soft Skills</h4>
+            <div class="skill-tags">
+              <span class="stag"><i class="bi bi-graph-up-arrow"></i> Analisis Data</span>
+              <span class="stag"><i class="bi bi-clipboard-data"></i> Pendataan Lapangan</span>
+              <span class="stag"><i class="bi bi-chat-dots"></i> Komunikasi</span>
+              <span class="stag"><i class="bi bi-people-fill"></i> Kerja Tim</span>
+              <span class="stag"><i class="bi bi-lightbulb"></i> Problem Solving</span>
+              <span class="stag"><i class="bi bi-clock-history"></i> Manajemen Waktu</span>
+              <span class="stag"><i class="bi bi-arrow-repeat"></i> Adaptif</span>
+              <span class="stag"><i class="bi bi-search"></i> Detail Oriented</span>
+              <span class="stag"><i class="bi bi-journal-text"></i> Dokumentasi</span>
+            </div>
+          </div>
+          <div class="skill-card flex-grow-1">
+            <h4 class="skill-card-title"><i class="bi bi-tools me-2 text-accent"></i>Tools</h4>
+            <div class="skill-tags">
+              <span class="stag"><i class="bi bi-git"></i> Git</span>
+              <span class="stag"><i class="bi bi-braces"></i> VS Code</span>
+              <span class="stag"><i class="bi bi-file-earmark-spreadsheet"></i> MS Excel</span>
+              <span class="stag"><i class="bi bi-google"></i> Google Workspace</span>
+              <span class="stag"><i class="bi bi-laptop"></i> CAPI / CAWI</span>
+              <span class="stag"><i class="bi bi-pie-chart"></i> Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Cards -->
+      <div class="section-sub-header" data-aos="fade-up">
+        <h3 class="sub-title">Mata Kuliah Semester 1</h3>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+          <div class="course-card">
+            <div class="course-icon"><i class="bi bi-diagram-3"></i></div>
+            <div>
+              <h5>Struktur Data & Algoritma</h5>
+              <small>R Muhamad Firzatullah</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="course-card">
+            <div class="course-icon"><i class="bi bi-calculator"></i></div>
+            <div>
+              <h5>Kalkulus</h5>
+              <small>Yohannes S.M. Simamora</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="course-card">
+            <div class="course-icon"><i class="bi bi-person-heart"></i></div>
+            <div>
+              <h5>Estetika Humanisme</h5>
+              <small>Rosanah S.S., M.I.Kom.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="course-card">
+            <div class="course-icon"><i class="bi bi-flag"></i></div>
+            <div>
+              <h5>Pendidikan Pancasila</h5>
+              <small>Indrati Asyariri S.Hum., M.Hum</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="course-card">
+            <div class="course-icon"><i class="bi bi-database"></i></div>
+            <div>
+              <h5>Sistem Basis Data</h5>
+              <small>Rahayu Amalia, M.Kom</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="course-card">
+            <div class="course-icon"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h5>Statistika & Probabilitas</h5>
+              <small>Dr. Silvana Syah, S.Si, M.Si</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+          <div class="course-card">
+            <div class="course-icon"><i class="bi bi-globe"></i></div>
+            <div>
+              <h5>Pemrograman Web I</h5>
+              <small>Riad Sahara, S.Si., M.T</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience" class="section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">03 — Pengalaman</span>
+        <h2 class="section-title">Riwayat <span class="accent">Pekerjaan</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <span class="tc-company">Badan Pusat Statistik Jakarta Utara</span>
+              <span class="tc-period">2022 - 2026</span>
+            </div>
+            <h4 class="tc-role">Berbagai Posisi</h4>
+            <div class="tc-desc text-start mb-0">
+              <ul style="list-style-type: disc; padding-left: 1.2rem; margin-bottom: 0;">
+                <li>Sensus Ekonomi 2026 - (Petugas Pemeriksa Lapangan)</li>
+                <li>Survei Nasional Literasi Inklusi Keuangan 2026 - (Petugas Pendataan Lapangan)</li>
+                <li>Survei Konsumsi Bahan Pokok Non Rumah Tangga 2025 - (Petugas Pendataan Lapangan)</li>
+                <li>Pemuktahiran Kerangka Geospasial dan Muatan Wilkerstat SE2026 tahun 2025 - (Petugas Pendataan Lapangan)</li>
+                <li>Survei Tahunan Perusahaan Industri Manufaktur (IBS Tahunan) tahun 2025 - (Petugas Pendataan Lapangan)</li>
+                <li>Pemuktahiran Direktori Perusahaan Awal 2025 - (Petugas Pendataan Lapangan)</li>
+                <li>Survei Statistical Business Register (SBR) 2024 - (Petugas Pendataan Lapangan)</li>
+                <li>Survei Komuter 2023 - (Petugas Pendataan Lapangan)</li>
+                <li>Survei Angkatan Kerja Nasional (SANKERNAS) 2023 - (Petugas Pendataan Lapangan)</li>
+                <li>Sensus Pertanian 2023 - UTP - (Petugas Pendataan Lapangan)</li>
+                <li>Forum Konsultasi Publik (FKP) Regsosek 2023 - (Asisten Fasilitator)</li>
+                <li>Pengolahan Pendataan Awal Registrasi Sosial Ekonomi 2023 - (Petugas Pengolahan)</li>
+                <li>Pendataan Awal Registrasi Sosial Ekonomi 2022 - (Petugas Pemeriksa Lapangan)</li>
+                <li>Long Form SP2020 tahun 2022 - (Petugas Pendataan Lapangan)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <span class="tc-company">Dinas PPAPP</span>
+              <span class="tc-period">2024</span>
+            </div>
+            <h4 class="tc-role">Surveyor</h4>
+            <div class="tc-desc text-start mb-0">
+              <ul style="list-style-type: disc; padding-left: 1.2rem; margin-bottom: 0;">
+                <li>Survei Pengalaman Hidup Anak Daerah 2024 - (Surveyor)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <span class="tc-company">Pemprov DKI Jakarta & BPS</span>
+              <span class="tc-period">2025</span>
+            </div>
+            <h4 class="tc-role">Surveyor</h4>
+            <div class="tc-desc text-start mb-0">
+              <ul style="list-style-type: disc; padding-left: 1.2rem; margin-bottom: 0;">
+                <li>Satu Data RW 2025 - (Surveyor)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <span class="tc-company">PEMILU SERENTAK</span>
+              <span class="tc-period">2024</span>
+            </div>
+            <h4 class="tc-role">Ketua KPPS & Keamanan TPS</h4>
+            <p class="tc-desc">Bertugas dalam Pemilu Serentak 2024 sebagai Ketua KPPS dan Keamanan TPS.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">04 — Proyek</span>
+        <h2 class="section-title">Karya & <span class="accent">Proyek</span></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="Asset/img/galeri11.jpg.png" alt="Project 1" class="project-img" />
+              <div class="project-overlay">
+                <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>Bootstrap 5</span>
+              </div>
+              <h4>Portfolio Website</h4>
+              <p>Website portofolio pribadi dengan desain glassmorphism dan animasi modern. Dibuat sebagai tugas UTS Pemrograman Web I.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION ===================== -->
+  <section id="education" class="section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">05 — Pendidikan</span>
+        <h2 class="section-title">Riwayat <span class="accent">Pendidikan</span></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="edu-card active-edu">
+            <div class="edu-year">2025 — Sekarang</div>
+            <div class="edu-logo-wrap">
+              <div class="edu-logo-placeholder"><i class="bi bi-building"></i></div>
+            </div>
+            <h4>S1 Informatika (PJJ)</h4>
+            <h5>Universitas Siber Asia</h5>
+            <p>Program studi informatika jarak jauh. Kelas IF205, NIM 250401010630. Sedang menempuh semester 1 dengan 7 mata kuliah aktif.</p>
+            <div class="edu-badge">Aktif</div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="edu-card">
+            <div class="edu-year">Sebelumnya</div>
+            <div class="edu-logo-wrap">
+              <div class="edu-logo-placeholder"><i class="bi bi-mortarboard"></i></div>
+            </div>
+            <h4>Akuntansi</h4>
+            <h5>SMK Strada 3</h5>
+            <p>Menyelesaikan pendidikan menengah kejuruan sebelum melanjutkan ke jenjang perguruan tinggi di Universitas Siber Asia.</p>
+            <div class="edu-badge completed">Selesai</div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-12">
+          <h4 class="mb-4 text-white" style="font-size: 1.1rem; font-weight: 600;">
+            <i class="bi bi-journal-bookmark me-2 text-accent"></i>Ringkasan Pendidikan
+          </h4>
+          <div class="table-glass-wrapper">
+            <table class="table custom-glass-table">
+              <thead>
+                <tr>
+                  <th>Jenjang</th>
+                  <th>Nama Institusi</th>
+                  <th>Program Studi / Jurusan</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>S1 (Sarjana)</td>
+                  <td>Universitas Siber Asia</td>
+                  <td>Informatika (PJJ)</td>
+                  <td>Aktif (Semester 1)</td>
+                </tr>
+                <tr>
+                  <td>SMK</td>
+                  <td>SMK Strada 3</td>
+                  <td>Akuntansi</td>
+                  <td>Lulus</td>
+                </tr>
+                <tr>
+                  <td>SMPN</td>
+                  <td>SMPN 277 Jakarta</td>
+                  <td> - </td>
+                  <td>Lulus</td>
+                </tr>
+                <tr>
+                  <td>SDN</td>
+                  <td>SDN Tugu Utara 02 Petang</td>
+                  <td> - </td>
+                  <td>Lulus</td>  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section id="gallery" class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">06 — Galeri</span>
+        <h2 class="section-title">Foto & <span class="accent">Kegiatan</span></h2>
+      </div>
+      <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="gallery-item g-featured">
+          <img src="Asset/img/galeri1.jpg.png" alt="Kegiatan 1" />
+          <div class="gallery-caption">Pendataan Lapangan SE2026</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri2.jpg.jpg" alt="Kegiatan 2" />
+          <div class="gallery-caption">Kuliah Online UNSIA</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri3.jpg.jpg" alt="Kegiatan 3" />
+          <div class="gallery-caption">Pemrograman Web</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset//img/galeri4.jpg.jpg" alt="Kegiatan 4" />
+          <div class="gallery-caption">Kegiatan 4</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri5.jpg.jpg" alt="Kegiatan 5" />
+          <div class="gallery-caption">Kegiatan 5</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri6.jpg.jpg" alt="Kegiatan 6" />
+          <div class="gallery-caption">Kegiatan 6</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri7.jpg.jpg" alt="Kegiatan 7" />
+          <div class="gallery-caption">Kegiatan 7</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri8.jpg.jpg" alt="Kegiatan 8" />
+          <div class="gallery-caption">Kegiatan 8</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri9.jpg.jpg" alt="Kegiatan 9" />
+          <div class="gallery-caption">Kegiatan 9</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Asset/img/galeri10.jpg.jpg" alt="Kegiatan 10" />
+          <div class="gallery-caption">Kegiatan 10</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACHIEVEMENTS ===================== -->
+  <section id="achievements" class="section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">07 — Pencapaian</span>
+        <h2 class="section-title">Penghargaan & <span class="accent">Sertifikasi</span></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="ach-card">
+            <div class="ach-icon"><i class="bi bi-award"></i></div>
+            <h5>Petugas SE2026</h5>
+            <p>Sertifikasi sebagai petugas resmi Sensus Ekonomi 2026 dari BPS</p>
+            <span class="ach-year">2026</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="ach-card">
+            <div class="ach-icon"><i class="bi bi-patch-check"></i></div>
+            <h5>Mitra BPS Aktif</h5>
+            <p>Terdaftar sebagai mitra statistik resmi BPS selama lebih dari 4 tahun</p>
+            <span class="ach-year">2023</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="ach-card">
+            <div class="ach-icon"><i class="bi bi-laptop"></i></div>
+            <h5>Mahasiswa Aktif UNSIA</h5>
+            <p>Diterima dan aktif di program Informatika PJJ Universitas Siber Asia</p>
+            <span class="ach-year">2025</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="ach-card">
+            <div class="ach-icon"><i class="bi bi-globe2"></i></div>
+            <h5>Web Developer Junior</h5>
+            <p>Menyelesaikan proyek web dengan Bootstrap 5 dan JavaScript animasi</p>
+            <span class="ach-year">2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-12">
+          <h4 class="mb-4 text-white" style="font-size: 1.1rem; font-weight: 600;">
+            <i class="bi bi-award me-2 text-accent"></i>Daftar Penghargaan & Sertifikasi
+          </h4>
+          <div class="table-glass-wrapper">
+            <table class="table custom-glass-table">
+              <thead>
+                <tr>
+                  <th>Tahun</th>
+                  <th>Penghargaan / Sertifikasi</th>
+                  <th>Penyelenggara</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026</td>
+                  <td>MOOC Pelatihan Petugas SE2026</td>
+                  <td>Badan Pusat Statistik</td>
+                  <td>Lulus Sertifikasi</td>
+                </tr>
+                <tr>
+                  <td>2025</td>
+                  <td>Pembekalan Mitra Statistik Tahun 2025</td>
+                  <td>Badan Pusat Statistik DKI Jakarta</td>
+                  <td>Lulus Sertifikat</td>
+                </tr>
+                <tr>
+                  <td>2025</td>
+                  <td>Mitra Statistik BPS 2026</td>
+                  <td>Badan Pusat Statistik Jakarta Utara</td>
+                  <td>Mitra Aktif</td>
+                </tr>
+                <tr>  
+                  <td>2023</td>
+                  <td>Kuasai Dasar Microsoft Word Untuk Pemula</td>
+                  <td>Skill Academy Ruang Guru</td>
+                  <td>Lulus Sertifikat</td>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section-pad section-dark">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">08 — Kontak</span>
+        <h2 class="section-title">Hubungi <span class="accent">Saya</span></h2>
+      </div>
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="contact-info">
+            <p class="contact-intro">Ada proyek, pertanyaan, atau sekadar ingin berkenalan? Jangan ragu untuk menghubungi saya.</p>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="bi bi-envelope"></i></div>
+              <div>
+                <small>Email</small>
+                <a href="mailto:immanuelhabel07@gmail.com">immanuelhabel07@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="bi bi-geo-alt"></i></div>
+              <div>
+                <small>Lokasi</small>
+                <span>Jakarta, Indonesia</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="bi bi-building"></i></div>
+              <div>
+                <small>Institusi</small>
+                <span>Universitas Siber Asia</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://id.linkedin.com/in/immanuelhabelguru" target="_blank" class="social-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/immanuelhabel07-hue" target="_blank" class="social-btn" title="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://instagram.com/habelguru" target="_blank" class="social-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://wa.me/6289630013491" target="_blank" class="social-btn" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="contact-form-card">
+            <div class="form-group-custom">
+              <label>Nama Lengkap</label>
+              <input type="text" id="cf-name" placeholder="Masukkan nama Anda" />
+            </div>
+            <div class="form-group-custom">
+              <label>Alamat Email</label>
+              <input type="email" id="cf-email" placeholder="email@contoh.com" />
+            </div>
+            <div class="form-group-custom">
+              <label>Subjek</label>
+              <input type="text" id="cf-subject" placeholder="Perihal pesan..." />
+            </div>
+            <div class="form-group-custom">
+              <label>Pesan</label>
+              <textarea id="cf-message" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
+            </div>
+            <button class="btn-primary-custom w-100" onclick="sendMessage()">
+              <i class="bi bi-send me-2"></i>Kirim Pesan
+            </button>
+            <div id="form-feedback" class="form-feedback" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;</span>IHG<span class="brand-bracket">/&gt;</span>
+        </div>
+        <p>Dibuat dengan <i class="bi bi-heart-fill text-accent"></i> oleh Immanuel Habel Guru</p>
+        <p class="footer-nim">NIM 250401010630 — Kelas IF205 — UNSIA 2025</p>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Immanuel Habel Guru. All rights reserved.</span>
+        <span>Informatika PJJ — Universitas Siber Asia</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== BACK TO TOP ===================== -->
+  <button id="back-to-top" title="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
